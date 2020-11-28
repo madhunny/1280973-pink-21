@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Check status][check-image]][check-url]
 
 * Студент: [Daria Rose](https://up.htmlacademy.ru/adaptive/21/user/1280973).
-* Наставник: `Неизвестно`.
+* Наставник: [Andrius Chepulis](https://htmlacademy.ru/profile/id240237).
 
 ---
 
