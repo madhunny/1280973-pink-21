@@ -1,0 +1,138 @@
+.review {
+  padding: 20px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 58px;
+  }
+}
+
+.review__wrapper {
+  position: relative;
+}
+
+.review__list {
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 94px;
+    padding-right: 126px;
+    padding-left: 126px;
+
+    background-image: url("../img/svg/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 79px 63px;
+  }
+}
+
+.review__item {
+  display: none;
+  margin: 0;
+  // padding-bottom: 35px;
+  // padding-top: 58px;
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.review__text {
+  font-size: @fs-small;
+  line-height: @lh-large;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+    margin: 16px 0 10px;
+
+    font-size: @fs-medium;
+
+    &:hover {
+      border-color: @border-dark;
+    }
+
+    &:active {
+      border-color: @border-red;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: @fs-medium;
+  }
+}
+
+.review__name {
+  margin: 20px 0 0;
+
+  font-size: @fs-medium;
+  line-height: @lh-large;
+  color: @txt-black;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    margin-top: 22px;
+    margin-bottom: 2px;
+
+    font-size: @fs-large;
+  }
+}
+
+.review__age {
+  margin-top: 0;
+
+  font-size: @fs-small;
+  line-height: @lh-large;
+
+  @media (max-width: @tablet-width - 1px) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    margin: 0;
+
+    font-size: @fs-medium;
+  }
+}
+
+.review__toggles {
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.review__navigation {
+  padding-bottom: 90px;
+}

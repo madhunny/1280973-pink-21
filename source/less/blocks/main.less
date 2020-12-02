@@ -1,0 +1,29 @@
+.main__text {
+  margin-top: 45px;
+  margin-bottom: 35px;
+
+  font-weight: @fw-normal;
+  font-size: @fs-small;
+  line-height: @lh-large;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 90px;
+    margin-bottom: 73px;
+    padding-right: 60px;
+    padding-left: 60px;
+
+    font-size: @fs-medium;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+
+.main__span {
+  @media (max-width: @tablet-width -1px) {
+    fill-size: 0;
+  }
+}

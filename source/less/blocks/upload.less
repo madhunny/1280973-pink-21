@@ -1,0 +1,147 @@
+.upload__background {
+  display: grid;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 41px;
+
+  background-color: @bg-grey;
+
+  gap: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 54px;
+
+    gap: 67px 45px;
+    grid-template-columns: 300px 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    padding-right: 60px;
+    padding-left: 80px;
+  }
+}
+
+.upload__title {
+  font-style: normal;
+  font-weight: @fw-normal;
+  font-size: @fs-small;
+  line-height: @lh-large;
+  text-align: center;
+  color: @txt-dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: @fs-medium;
+  }
+}
+
+.upload__list {
+  margin: 0 -20px;
+  padding: 0 40px 75px;
+  list-style: none;
+  border-bottom: 1px solid hsla(211, 27%, 21%, 0.1);
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.upload__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 280px;
+  height: 55px;
+  margin: 0 auto;
+
+  font-weight: @fw-bold;
+  font-size: @fs-medium;
+  line-height: @lh-small;
+  // margin-bottom: 12px;
+  font-family: @ff-main;
+  text-decoration: none;
+
+  border-radius: 30px;
+  cursor: pointer;
+
+  &--post {
+    color: @txt-red;
+
+    border: @border-3red;
+  }
+
+  &--post:hover {
+    color: @txt-white;
+
+    background-color: @bg-red;
+  }
+
+  &--post:active {
+    color: @trst-white;
+  }
+
+  &--reset {
+    border: @border-3dark;
+    opacity: 0.1;
+  }
+
+  &--reset:hover {
+    opacity: 0.3;
+  }
+
+  &--reset:active {
+    color: @trst-white;
+
+    background-color: @bg-dark;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    height: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+    height: 55px;
+  }
+}
+
+.upload__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media (min-width: @tablet-width) {
+    gap: 24px;
+    // margin-bottom: 50px;
+    // margin-left: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 425px;
+    margin: 0;
+    padding: 0;
+    gap: 44px;
+  }
+}
+
+.upload__image {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    grid-row-end: span 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

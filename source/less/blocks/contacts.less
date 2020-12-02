@@ -1,0 +1,141 @@
+.contacts {
+  position: relative;
+
+  padding: 17px 0 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 1px);
+    z-index: 3;
+
+    width: 100%;
+    height: 34px;
+
+    background-color: white;
+
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 1px 0 12px;
+
+    &::after {
+      height: 68px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 0 22px;
+
+    &::after {
+      height: 103px;
+    }
+  }
+}
+
+.contacts__question {
+  font-weight: @fw-light;
+  font-size: @fs-large;
+  line-height: @lh-large;
+  text-align: center;
+  color: @txt-dark;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 30px;
+    margin-left: 30px;
+
+    font-size: @fs-xxl;
+    line-height: normal;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 120px;
+
+    font-size: @fs-xxxl;
+  }
+}
+
+.contacts__list {
+  display: grid;
+  margin-top: 32px;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -8px;
+
+    gap: 47px 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-around;
+    margin: 0 -10px;
+
+    gap: 0;
+    grid-template-columns: repeat(3, 224px);
+    // margin: 0 20px;
+  }
+}
+
+.contacts__item {
+  @media (min-width: @tablet-width) {
+    // margin-left: 4px;
+  }
+
+  @media (max-width: @desktop-width - 1px) {
+    &:last-child {
+      max-width: 288px;
+
+      grid-column-end: -1;
+      grid-column-start: 1;
+      justify-self: center;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child,
+    &:last-child {
+      order: -1;
+    }
+  }
+}
+
+.contacts__title {
+  margin: 0 auto;
+
+  font-size: @fs-medium;
+  line-height: normal;
+  // margin-top: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__link {
+  font-weight: @fw-light;
+  font-size: @fs-large;
+  line-height: normal;
+  color: @txt-red;
+
+  &--mail {
+    &:hover {
+      color: @txt-dark;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: @txt-dark;
+      text-decoration: none;
+
+      opacity: 0.3;
+    }
+  }
+}

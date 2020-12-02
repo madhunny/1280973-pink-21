@@ -1,0 +1,39 @@
+.navigation {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 41px;
+
+    transform: translateY(-50%);
+  }
+}
+
+.navigation__item {
+  @media (min-width: @desktop-width) {
+    width: 22px;
+    height: 41px;
+
+    font-size: 0;
+    color: @txt-dark;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+}
