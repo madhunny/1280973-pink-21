@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Пинк</title>
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <header class="header">
+    <nav class="nav">
+      <div class="wrapper nav__wrapper">
+        <div class="nav__menu">
+          <a class="nav__logo-link" href="index.html" title="Логотип Pink">
+            <svg class="nav__logo" width="74" height="24">
+              <use class="nav__logo-pink" href="img/sprite.svg#logo-pink" fill="currentColor" x="0" y="0"></use>
+              <use class="only-desktop" href="img/sprite.svg#logo-dot" fill="#D22856" width="7.28" height="7.16"
+                x="91.65" y="7"></use>
+              <use class="only-desktop" href="img/sprite.svg#logo-glass-desktop" fill="currentColor" x="0" y="0"></use>
+              <use class="only-tablet" href="img/sprite.svg#logo-glass" fill="currentColor" x="0" y="0"></use>
+              <use class="only-desktop" href="img/sprite.svg#logo-stars" fill="#D22856" x="5.29" y="10.5"></use>
+            </svg>
+          </a>
+          <button class="nav__button" type="button" aria-expanded="true" aria-controls="nav__list">
+            <svg class="nav__button-img nav__button-img--close" width="23" height="23" fill="none" viewBox="0 0 23 23"
+              stroke="currentColor" stroke-width="3" stroke-dashoffset="0" stroke-dasharray="0">
+              <line x1="1" y1="1" x2="22" y2="22" />
+              <line x1="22" y1="1" x2="1" y2="22" />
+            </svg>
+            <svg class="nav__button-img nav__button-img--open" width="50" height="24" fill="none" viewBox="0 0 50 24"
+              stroke="currentColor" stroke-width="4" stroke-dashoffset="0" stroke-dasharray="0" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="2" y1="2" x2="48" y2="2" />
+              <line x1="2" y1="50%" x2="48" y2="50%" />
+              <line x1="2" y1="22" x2="48" y2="22" />
+            </svg>
+          </button>
+        </div>
+        <ul class="nav__list" id="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="nav__item nav__item--active">
+            <a class="nav__link" href="./photo.html">Фотографии</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./form.html">Конкурс</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="top-headline">
+      <div class="top-headline__wrapper  top-headline__wrapper--photo wrapper">
+        <h1 class="visually-hidden">Pink life</h1>
+        <h2 class="top-headline__text">Фотографии пользователей
+        </h2>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery__panorama panorama">
+        <div class="wrapper">
+          <h2 class="visually-hidden">Panorama</h2>
+          <h2 class="panorama__headline">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не
+            хватает ваших?
+          </h2>
+        </div>
+        <div class="panorama__image-wrap">
+          <picture>
+            <source media="(min-width: 660px)"
+              srcset="img/gallery/tablet/panorama-tablet@1x.jpg 1x, img/gallery/tablet/panorama-tablet@2x.jpg 2x">
+            <source media="(min-width: 1200px)"
+              srcset="img/gallery/desktop/panorama-desktop@1x.jpg 1x, img/gallery/desktop/panorama-desktop@2x.jpg 2x">
+            <img class="panorama__image" src="img/gallery/mobile/panorama-mobile@1x.jpg"
+              srcset="img/gallery/mobile/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Panorama of the day">
+          </picture>
+          <span class="panorama__image-text">Панорама дня</span>
+        </div>
+        <div class="wrapper">
+          <div class="panorama__massage">
+            <p class="panorama__name">Анна<span class="panorama__time"> (5 минут назад)</span></p>
+            <p class="panorama__text">Прыгать или нет? Напишите в комментарии свой совет и<br> смотрите прямую
+              трансляцию в
+              перископе, задавайте свои вопросы!</p>
+            <div class="panorama__likes">
+              <svg class="panorama__icon" width="13px" height="12px" fill="currentColor">
+                <use href="img/sprite.svg#like" />
+              </svg>
+              <p class="panorama__likes-text">Нравится: <span>215</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper gallery__wrapper">
+        <article class="gallery__item photo">
+          <h2 class="visually-hidden">Pohoto1</h2>
+          <picture>
+            <source media="(min-width: 660px)"
+              srcset="img/gallery/tablet/photo-car-tablet@1x.jpg 1x, img/gallery/tablet/photo-car-tablet@2x.jpg 2x">
+            <source media="(min-width: 1200px)"
+              srcset="img/gallery/desktop/photo-car-desktop@1x.jpg 1x, img/gallery/desktop/photo-car-desktop@2x.jpg 2x">
+            <img class="photo__image" src="img/gallery/mobile/photo-car-mobile@1x.jpg "
+              srcset="img/gallery/mobile/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="Car">
+          </picture>
+          <div class="photo__massage">
+            <p class="photo__name">Левон<span class="photo__time">(5 часов назад)</span></p>
+            <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          </div>
+          <div class="photo__likes">
+            <svg class="photo__icon" width="13px" height="12px" fill="currentColor">
+              <use href="img/sprite.svg#like" />
+            </svg>
+            <p class="photo__likes-text">Нравится: <span>356</span></p>
+          </div>
+        </article>
+        <article class="gallery__item photo">
+          <h2 class="visually-hidden">Pohoto2</h2>
+          <picture>
+            <source media="(min-width: 660px)"
+              srcset="img/gallery/tablet/photo-drumset-tablet@1x.jpg 1x, img/gallery/tablet/photo-drumset-tablet@2x.jpg 2x">
+            <source media="(min-width: 1200px)"
+              srcset="img/gallery/desktop/photo-drumset-desktop@1x.jpg 1x, img/gallery/desktop/photo-drumset-desktop@2x.jpg 2x">
+            <img class="photo__image" src="img/gallery/mobile/photo-drumset-mobile@1x.jpg "
+              srcset="img/gallery/mobile/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="Drumset">
+          </picture>
+          <div class="photo__massage">
+            <p class="photo__name">Антон<span class="photo__time"> (12 часов назад)</span></p>
+            <p class="photo__text">Соседи будут рады!</p>
+          </div>
+          <div class="photo__likes">
+            <svg class="photo__icon" width="13px" height="12px" fill="currentColor">
+              <use href="img/sprite.svg#like" />
+            </svg>
+            <p class="photo__likes-text">Нравится: <span>666</span></p>
+          </div>
+        </article>
+        <article class="gallery__item photo">
+          <h2 class="visually-hidden">Pohoto3</h2>
+          <picture>
+            <source media="(min-width: 660px)"
+              srcset="img/gallery/tablet/photo-window-tablet@1x.jpg 1x, img/gallery/tablet/photo-window-tablet@2x.jpg 2x">
+            <source media="(min-width: 1200px)"
+              srcset="img/gallery/desktop/photo-window-desktop@1x.jpg 1x, img/gallery/desktop/photo-window-desktop@2x.jpg 2x">
+            <img class="photo__image" src="img/gallery/mobile/photo-window-mobile@1x.jpg "
+              srcset="img/gallery/mobile/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="Window">
+          </picture>
+          <div class="photo__massage">
+            <p class="photo__name">Борис<span class="photo__time"> (20 часов назад)</span></p>
+            <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном</p>
+          </div>
+          <div class="photo__likes">
+            <svg class="photo__icon" width="13px" height="12px" fill="currentColor">
+              <use href="img/sprite.svg#like" />
+            </svg>
+            <p class="photo__likes-text">Нравится: <span>215</span></p>
+          </div>
+        </article>
+        <article class="gallery__item photo">
+          <h2 class="visually-hidden">Pohoto4</h2>
+          <picture>
+            <source media="(min-width: 660px)"
+              srcset="img/gallery/tablet/photo-fair-tablet@1x.jpg 1x, img/gallery/tablet/photo-fair-tablet@2x.jpg 2x">
+            <source media="(min-width: 1200px)"
+              srcset="img/gallery/desktop/photo-fair-desktop@1x.jpg 1x, img/gallery/desktop/photo-fair-desktop@2x.jpg 2x">
+            <img class="photo__image" src="img/gallery/mobile/photo-fair-mobile@1x.jpg "
+              srcset="img/gallery/mobile/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="Fair">
+          </picture>
+          <div class="photo__massage">
+            <p class="photo__name">Сергей<span class="photo__time"> (25 часов назад)</span></p>
+            <p class="photo__text">Самая кубанская в мире!</p>
+          </div>
+          <div class="photo__likes">
+            <svg class="photo__icon" width="13px" height="12px" fill="currentColor">
+              <use href="img/sprite.svg#like" />
+            </svg>
+            <p class="photo__likes-text">Нравится: <span>4</span></p>
+          </div>
+        </article>
+        <article class="gallery__item photo">
+          <h2 class="visually-hidden">Pohoto5</h2>
+          <picture>
+            <source media="(min-width: 660px)"
+              srcset="img/gallery/tablet/photo-pov-tablet@1x.jpg 1x, img/gallery/tablet/photo-pov-tablet@2x.jpg 2x">
+            <source media="(min-width: 1200px)"
+              srcset="img/gallery/desktop/photo-pov-desktop@1x.jpg 1x, img/gallery/desktop/photo-pov-desktop@2x.jpg 2x">
+            <img class="photo__image" src="img/gallery/mobile/photo-pov-mobile@1x.jpg "
+              srcset="img/gallery/mobile/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="Cliff">
+          </picture>
+          <div class="photo__massage">
+            <p class="photo__name">Максим<span class="photo__time"> (40 часов назад)</span></p>
+            <p class="photo__text">Где снег-то?</p>
+          </div>
+          <div class="photo__likes">
+            <svg class="photo__icon" width="13px" height="12px" fill="currentColor">
+              <use href="img/sprite.svg#like" />
+            </svg>
+            <p class="photo__likes-text">Нравится: <span>150</span></p>
+          </div>
+        </article>
+        <article class="gallery__item photo">
+          <h2 class="visually-hidden">Pohoto6</h2>
+          <picture>
+            <source media="(min-width: 660px)"
+              srcset="img/gallery/tablet/photo-wing-tablet@1x.jpg 1x, img/gallery/tablet/photo-wing-tablet@2x.jpg 2x">
+            <source media="(min-width: 1200px)"
+              srcset="img/gallery/desktop/photo-wing-desktop@1x.jpg 1x, img/gallery/desktop/photo-wing-desktop@2x.jpg 2x">
+            <img class="photo__image" src="img/gallery/mobile/photo-wing-mobile@1x.jpg "
+              srcset="img/gallery/mobile/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="Wing fly">
+          </picture>
+          <div class="photo__massage">
+            <p class="photo__name">Надежда<span class="photo__time"> (45 часов назад)</span></p>
+            <p class="photo__text">Всем GM и взаимные лайки!</p>
+          </div>
+          <div class="photo__likes">
+            <svg class="photo__icon" width="13px" height="12px" fill="currentColor">
+              <use href="img/sprite.svg#like" />
+            </svg>
+            <p class="photo__likes-text">Нравится: <span>2560</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="upload">
+      <h2 class="visually-hidden">Добавить фото</h2>
+      <p class="upload__title ">
+        Затмите их всех!<br />
+        Выкладывайте все, что накопилось в телефоне!
+      </p>
+      <div class="upload__background wrapper">
+        <picture class="upload__image">
+          <img src="img/gallery/mobile/photo-road-mobile@1x.jpg" srcset="img/gallery/mobile/photo-road-mobile@2x.jpg 2x"
+            width="280" height="180" alt="Фото пользователей" />
+        </picture>
+        <div class="upload__tools">
+          <ul class="upload__list tools">
+            <li class="tools__item tools__item--crop tools__item--active">
+              <button class="tools__button tools__button--current tools__crop"><span class="visually-hidden">Обрезать
+                  фото</span>
+                <svg class="tools__icon" width="44" height="44" fill="currentColor">
+                  <use href="img/sprite.svg#crop" />
+                </svg>
+              </button>
+              <div class="tools__slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="tools__slider" id="crop-range">
+              </div>
+            </li>
+            <li class="tools__item tools__item--fill">
+              <button class="tools__button tools__fill"><span class="visually-hidden">Заливка
+                  фото</span>
+                <svg class="tools__icon" width="44" height="44" fill="currentColor">
+                  <use href="img/sprite.svg#fill" />
+                </svg>
+              </button>
+              <div class="tools__slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="tools__slider" id="fill-range">
+              </div>
+            </li>
+            <li class="tools__item tools__item--contrast">
+              <button class="tools__button tools__contrast"><span class="visually-hidden">Контраст
+                  фото</span>
+                <svg class="tools__icon" width="44" height="44" fill="currentColor">
+                  <use href="img/sprite.svg#contrast" />
+                </svg>
+              </button>
+              <div class="tools__slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="tools__slider" id="contast-range">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="upload__buttons">
+          <button class="upload__button upload__button--post" type="submit">Запостить</button>
+          <button class="upload__button upload__button--reset" type="reset">Отмена</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper footer__wrapper ">
+      <a class="footer__logo" href="https://htmlacademy.ru/intensive/adaptive" title="Логотип Pink">
+        <svg class="bottom-logo" width="147" height="40">
+          <use class="bottom-logo__pink" href="img/sprite.svg#logo-pink" fill="#283645" x="72" y="17"></use>
+          <use class="only-desktop" href="img/sprite.svg#logo-dot" fill="#D22856" width="7.28" height="7.16" x="91.65"
+            y="7"></use>
+          <use class="only-desktop" href="img/sprite.svg#logo-glass-desktop" fill="#D22856" x="0" y="0"></use>
+          <use class="hide-desktop" href="img/sprite.svg#logo-glass" fill="#D22856" x="0" y="0"></use>
+          <use class="only-desktop" href="img/sprite.svg#logo-stars" fill="#D22856" x="5.29" y="10.5"></use>
+        </svg>
+      </a>
+      <div class="footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Мы в Твиттере
+              <svg width="18" height="14" fill="#D22856">
+                <use href="img/sprite.svg#twitter" />
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Мы в Фейсбуке
+              <svg width="9" height="18" fill="#D22856">
+                <use href="img/sprite.svg#facebook" />
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              Наш Ютуб
+              <svg width="15" height="13" fill="#D22856">
+                <use href="img/sprite.svg#youtube" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer__copyright">Разработано
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <svg width="27" height="34" fill="#D22856">
+            <use href="img/sprite.svg#htmlacademy" />
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
