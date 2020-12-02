@@ -1,0 +1,19 @@
+.reset-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &:-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+}

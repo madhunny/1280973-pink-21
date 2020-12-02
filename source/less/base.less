@@ -1,0 +1,48 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+svg {
+  fill: currentColor;
+}
+
+.only-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width - 1px) {
+    display: initial;
+  }
+}
+
+.only-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+    display: initial;
+  }
+}
+
+.hide-desktop {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.show-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: initial;
+  }
+}

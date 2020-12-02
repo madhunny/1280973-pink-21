@@ -1,0 +1,34 @@
+.gallery {
+  padding: 10px 0;
+}
+
+.gallery__wrapper {
+  display: grid;
+
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.gallery__challenge {
+  margin: 20px 10px;
+
+  font-weight: @fw-normal;
+  font-size: @fs-small;
+  line-height: @lh-large;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    margin-top: 74px;
+    margin-bottom: 72px;
+
+    font-size: @fs-medium;
+  }
+}
