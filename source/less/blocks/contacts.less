@@ -1,6 +1,5 @@
 .contacts {
   position: relative;
-
   padding: 17px 0 20px;
 
   &::after {
@@ -8,12 +7,9 @@
     position: absolute;
     top: calc(100% - 1px);
     z-index: 3;
-
     width: 100%;
     height: 34px;
-
     background-color: white;
-
     clip-path: polygon(50% 100%, 0 0, 100% 0);
   }
 
@@ -44,14 +40,12 @@
   @media (min-width: @tablet-width) {
     margin-right: 30px;
     margin-left: 30px;
-
     font-size: @fs-xxl;
     line-height: normal;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 120px;
-
     font-size: @fs-xxxl;
   }
 }
@@ -60,15 +54,12 @@
   display: grid;
   margin-top: 32px;
   padding: 0;
-
   list-style: none;
   text-align: center;
-
   gap: 20px;
 
   @media (min-width: @tablet-width) {
     margin-top: -8px;
-
     gap: 47px 20px;
     grid-template-columns: 1fr 1fr;
   }
@@ -76,22 +67,15 @@
   @media (min-width: @desktop-width) {
     justify-content: space-around;
     margin: 0 -10px;
-
     gap: 0;
     grid-template-columns: repeat(3, 224px);
-    // margin: 0 20px;
   }
 }
 
 .contacts__item {
-  @media (min-width: @tablet-width) {
-    // margin-left: 4px;
-  }
-
-  @media (max-width: @desktop-width - 1px) {
+  @media (max-width: @desktop-width) {
     &:last-child {
       max-width: 288px;
-
       grid-column-end: -1;
       grid-column-start: 1;
       justify-self: center;
@@ -99,7 +83,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    &:first-child,
+    &:first-child {
+      order: -1;
+    }
+
     &:last-child {
       order: -1;
     }
@@ -108,10 +95,8 @@
 
 .contacts__title {
   margin: 0 auto;
-
   font-size: @fs-medium;
   line-height: normal;
-  // margin-top: 0;
 
   @media (min-width: @desktop-width) {
     margin-top: 40px;
@@ -125,17 +110,14 @@
   line-height: normal;
   color: @txt-red;
 
-  &--mail {
-    &:hover {
-      color: @txt-dark;
-      text-decoration: underline;
-    }
+  &:hover {
+    color: @txt-dark;
+    text-decoration: underline;
+  }
 
-    &:active {
-      color: @txt-dark;
-      text-decoration: none;
-
-      opacity: 0.3;
-    }
+  &:active {
+    color: @txt-dark;
+    text-decoration: none;
+    opacity: 0.3;
   }
 }
