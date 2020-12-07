@@ -99,6 +99,7 @@
   }
 
   @media (min-width: @desktop-width) {
+
     &:first-child,
     &:last-child {
       order: -1;
@@ -125,17 +126,14 @@
   line-height: normal;
   color: @txt-red;
 
-  &--mail {
-    &:hover {
-      color: @txt-dark;
-      text-decoration: underline;
-    }
+  &:hover {
+    color: @txt-dark;
+    text-decoration: underline;
+  }
 
-    &:active {
-      color: @txt-dark;
-      text-decoration: none;
-
-      opacity: 0.3;
-    }
+  &:active {
+    color: @txt-dark;
+    text-decoration: none;
+    opacity: 0.3;
   }
 }
