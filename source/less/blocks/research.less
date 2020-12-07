@@ -7,7 +7,6 @@
 
   @media (min-width: @desktop-width) {
     padding-bottom: 68px;
-
     background-color: @bg-grey;
     background-repeat: no-repeat;
     background-size: auto;
@@ -16,26 +15,19 @@
 
 .research__wrapper {
   position: relative;
-
   display: grid;
   align-items: start;
   padding-top: 54px;
-  // padding-left: 50%;
-
   text-align: left;
-
   gap: 12px 72px;
   grid-template-columns: 238px 1fr;
 
   &::before {
     content: "";
-
     min-height: 345px;
-
     background-image: url("../img/svg/icon-timer.svg");
     background-repeat: no-repeat;
     background-size: contain;
-
     grid-row-end: span 4;
   }
 
@@ -45,27 +37,23 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 24px;
-
     gap: 29px 71px;
     grid-template-columns: 298px 1fr;
-    // padding-left: 40%;
   }
 }
 
 .research__title {
   margin: 40px 0 0;
-
   font-weight: @fw-bold;
   font-size: @fs-xl;
   line-height: 36px;
   color: @txt-black;
-  // max-width: 175px;
 
   @media (min-width: @desktop-width) {
     margin-top: 94px;
-
     font-size: @fs-xl;
     line-height: 1;
+
     /* or 100% */
     br {
       display: none;
@@ -76,14 +64,11 @@
 .research__description {
   margin: 0;
   margin-right: 10px;
-
   font-size: @fs-small;
   line-height: @lh-medium;
 
   @media (min-width: @desktop-width) {
-    // margin-top: -10px;
     margin-right: 0;
-
     font-size: @fs-medium;
     line-height: @lh-large;
   }
@@ -91,7 +76,6 @@
 
 .research__link {
   margin: 0 0;
-
   font-size: @fs-small;
   line-height: @lh-medium;
   color: @txt-red;
