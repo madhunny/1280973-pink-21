@@ -32,14 +32,15 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 const stylesMin = () => {
   return gulp
-    .src("source/css/style.css")
+    .src("build/css/style.css")
     .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 };
