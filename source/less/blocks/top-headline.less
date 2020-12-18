@@ -1,6 +1,6 @@
 .top-headline {
-  margin-top: -70px;
   padding: 0;
+  margin-top: -70px;
   overflow: hidden;
   color: @txt-white;
   background-color: @bg-dark;
@@ -13,7 +13,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: -110px;
     background-image: url("../img/top/tablet/bg-back-tablet@1x.jpg");
     background-position: center;
     background-size: cover;
@@ -34,16 +33,16 @@
 
 .top-headline__wrapper {
   min-height: 240px;
-  padding: 70px + 30px 0 30px;
+  padding: 98px 0 30px;
 
   @media (min-width: @tablet-width) {
     min-height: 440px;
-    padding: 178px 0 30px;
+    padding: 110px 0;
+    margin-top: -41px;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 394px;
-    padding-top: 170px;
   }
 }
 
@@ -59,11 +58,15 @@
   @media (min-width: @tablet-width) {
     font-size: 50px;
     line-height: 68px;
+    margin-top: 65px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 36ch;
     font-size: 50px;
     line-height: 68px;
+    padding: 0 155px;
+    margin-top: 60px;
+    margin-bottom: -20px;
   }
 }
