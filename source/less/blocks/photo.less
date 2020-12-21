@@ -53,11 +53,21 @@
   align-items: center;
   margin: 10px 0 21px;
   padding: 0 17px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 12px;
+    justify-content: space-between;
+  }
 }
 
 .photo__icon {
   margin-right: 19px;
   fill: @fill-red;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 
 .photo__likes-text {
