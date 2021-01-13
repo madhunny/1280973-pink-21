@@ -77,11 +77,16 @@
 .nav__button {
   padding: 0;
   display: flex;
+  font-size: 0;
   background-repeat: no-repeat;
   background-color: unset;
   background-position: center;
   border: none;
   cursor: pointer;
+
+  &--no-js {
+    display: none;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -125,8 +130,9 @@
     margin-left: auto;
     display: grid;
     grid-auto-flow: column;
-    gap: 79px;
-    margin-top: 10px;
+    gap: 80px;
+    position: relative;
+    top: 5px;
   }
 
   @media (max-width: @desktop-width) {

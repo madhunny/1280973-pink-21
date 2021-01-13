@@ -34,6 +34,12 @@
   @media (min-width: @tablet-width) {
     color: @fill-red;
     opacity: 1;
+
+    &--fill {
+      position: relative;
+      left: -4px;
+      top: 3px;
+    }
   }
 }
 
@@ -67,12 +73,16 @@
   @media (min-width: @tablet-width) {
     align-items: center;
     width: 100%;
-    padding-top: 27px;
-    padding-right: 18px;
-    padding-bottom: 27px;
-    padding-left: 4px;
+    padding: 8px 0 20px;
     border-bottom: 1px solid hsla(211, 27%, 21%, 0.1);
-    // display: grid;
+
+    &--fill {
+      padding: 24px 0 21px;
+    }
+
+    &--contrast {
+      padding: 24px 0 24px;
+    }
   }
 }
 
@@ -80,7 +90,13 @@
   @media (min-width: @tablet-width) {
     width: 22px;
     height: 22px;
-    margin-right: 28px;
+    margin-right: 19px;
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+      margin-right: 25px;
+    }
   }
 }
 

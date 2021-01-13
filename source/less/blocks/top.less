@@ -1,5 +1,5 @@
 .top {
-  margin-top: -66px;
+  margin-top: -70px;
   padding: 0;
   overflow: hidden;
   color: @txt-white;
@@ -35,22 +35,22 @@
 .top__wrapper {
   position: relative;
   display: grid;
-  padding-top: 22px + 66px;
+  padding-top: 92px;
   padding-bottom: 17px;
-  gap: 28px;
+  gap: 29px;
   justify-items: center;
 
   @media (min-width: @tablet-width) {
     z-index: 3;
-    padding-top: 200px;
+    padding-top: 202px;
     padding-right: 51.52vw;
-    padding-bottom: 106px;
+    padding-bottom: 110px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 210px;
-    padding-right: 53vw;
-    padding-bottom: 121px;
+    padding-right: 54vw;
+    padding-bottom: 124px;
   }
 }
 
@@ -144,17 +144,6 @@
   position: relative;
   top: -27px;
   left: -20px;
-  /*  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 340px;
-    background-image: url("../img/top/mobile/iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position-x: initial;
-    background-position-y: bottom;
-    margin-bottom: 28px;
-  } */
 
   @media (min-width: @tablet-width) {
     margin-bottom: 127px;
@@ -168,17 +157,6 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
     padding-bottom: 50px;
-    /* &::before {
-      background-image: url("../img/top/desktop/iphone-hand-desktop@1x.png");
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position-x: center;
-      background-position-y: bottom;
-      width: 720px;
-      height: 645px;
-      right: -50px;
-      left: auto;
-    } */
   }
 }
 
@@ -191,7 +169,7 @@
   line-height: @lh-small;
   text-align: center;
   color: @txt-white;
-  background-color: none;
+  background-color: transparent;
   border: @border-3white;
   border-radius: @radius;
 
@@ -208,13 +186,15 @@
 
   @media (min-width: @tablet-width) {
     max-width: 300px;
-    padding: 17px 20px;
+    padding: 16px 20px;
+    margin-top: -1px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 9px;
+    margin-top: 6px;
     padding: 16px 15px;
     font-size: 21px;
+    margin-left: 10px;
   }
 }
 
@@ -230,7 +210,7 @@
   justify-self: center;
 
   @media (min-width: @tablet-width) {
-    margin: 16px 0 0;
+    margin: 17px 0 0;
     // margin-top: 42px;
     // margin-bottom: 47px;
   }
@@ -238,7 +218,7 @@
   @media (min-width: @desktop-width) {
     margin-top: 38px;
     margin-bottom: 13px;
-    margin-left: -10px;
+    margin-left: 8px;
     gap: 10px 36px;
   }
 }
@@ -248,7 +228,7 @@
 }
 
 .top__text {
-  margin-top: -10px;
+  margin-top: -14px;
   font-size: @fs-small;
   line-height: @lh-medium;
   text-align: center;
@@ -259,9 +239,13 @@
     position: relative;
     display: inline-block;
     width: 108%;
-    margin-top: 2px;
-    margin-bottom: 5px;
+    margin-top: -1px;
+    margin-bottom: 0;
     margin-left: 10px;
     font-size: @fs-medium;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 4px;
   }
 }

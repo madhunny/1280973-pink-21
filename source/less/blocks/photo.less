@@ -5,6 +5,7 @@
 
   @media (max-width: @tablet-width) {
     margin: 0;
+    min-height: 455px;
   }
 }
 
@@ -13,7 +14,7 @@
   line-height: 0;
 }
 
-.photo__massage {
+.photo__message {
   padding: 0 17px;
 
   @media (min-width: @tablet-width) {
@@ -27,6 +28,10 @@
   font-size: @fs-small;
   line-height: @lh-medium;
   color: @txt-dark;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 16px;
+  }
 }
 
 .photo__time {
@@ -43,6 +48,10 @@
   font-size: @fs-small;
   line-height: @lh-medium;
   color: @txt-dark;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: auto;
+  }
 }
 
 .photo__likes {
@@ -51,13 +60,15 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin: 10px 0 21px;
+  margin: 10px 0 20px;
   padding: 0 17px;
 
   @media (min-width: @tablet-width) {
     padding-left: 30px;
     padding-right: 12px;
+    padding-top: 11px;
     justify-content: space-between;
+    margin: auto 0 24px;
   }
 }
 

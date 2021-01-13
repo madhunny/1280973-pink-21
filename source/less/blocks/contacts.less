@@ -38,8 +38,7 @@
   color: @txt-dark;
 
   @media (min-width: @tablet-width) {
-    margin-right: 30px;
-    margin-left: 30px;
+    margin: 44px 30px 34px;
     font-size: @fs-xxl;
     line-height: normal;
   }
@@ -68,7 +67,8 @@
     justify-content: space-around;
     margin: 0 -10px;
     gap: 0;
-    grid-template-columns: repeat(3, 224px);
+
+    grid-template-columns: repeat(3, 240px);
   }
 }
 
@@ -97,6 +97,10 @@
   margin: 0 auto;
   font-size: @fs-medium;
   line-height: normal;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 2px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: -1 auto;
