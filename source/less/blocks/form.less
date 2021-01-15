@@ -53,8 +53,11 @@
     .form__list {
       display: grid;
       gap: 36px;
-      margin-top: 54px;
-      margin-left: 75px;
+      margin-top: 38px;
+
+      @media (min-width: @tablet-width) {
+        margin-top: 36px;
+      }
     }
   }
 
@@ -76,7 +79,7 @@
 
   &--comments {
     grid-area: comments;
-    padding-bottom: 36px;
+    padding-bottom: 38px;
   }
 
   @media (min-width: @tablet-width) {
@@ -102,7 +105,7 @@
       padding-bottom: 28px;
 
       .form__list {
-        gap: 25px;
+        gap: 36px;
       }
     }
 
@@ -165,8 +168,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    gap: 48px;
-    margin-top: 3px;
+    gap: 46px;
   }
 
   @media (min-width: @desktop-width) {
@@ -218,13 +220,12 @@
     &--column {
       display: grid;
       grid-area: 22px;
-      // width: 100%;
     }
   }
 }
 
 .form__legend {
-  margin: -1px auto 21px;
+  margin: 0;
   padding: 0 30px;
   font-weight: @fw-normal;
   font-size: @fs-small;
@@ -232,13 +233,13 @@
   text-align: center;
   color: @txt-red;
   text-transform: @txt-upper;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 0;
     left: 50%;
     right: 0;
-    margin: 0;
     width: max-content;
     padding: 10px 31px;
     background-color: @bg-white;
@@ -327,6 +328,7 @@
   color: @txt-dark;
   border: @border-grey;
   border-radius: @br-min;
+  letter-spacing: 0.5px;
 
   &:hover {
     border: @border-dark;
@@ -344,6 +346,7 @@
       background-repeat: no-repeat;
       background-position: right;
       background-size: contain;
+      margin: 0;
     }
 
     &--mail {
@@ -351,6 +354,7 @@
       background-repeat: no-repeat;
       background-position: right;
       background-size: contain;
+      margin: 0;
     }
   }
 
@@ -377,13 +381,13 @@
   margin: 0;
   border: @border-grey;
 
-  &:checked + .form__label-choice::before {
+  &:checked+.form__label-choice::before {
     background-image: url("../img/svg/icon-yes.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &:focus + .form__label-choice::before {
+  &:focus+.form__label-choice::before {
     border: @border-red;
   }
 }
@@ -395,13 +399,13 @@
   border: @border-grey;
   border-radius: @radius;
 
-  &:checked + .form__label-radio::before {
+  &:checked+.form__label-radio::before {
     background-image: url("../img/svg/ellipse-small.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &:focus + .form__label-radio::before {
+  &:focus+.form__label-radio::before {
     border: @border-red;
   }
 }
