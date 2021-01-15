@@ -39,6 +39,10 @@
   @media (min-width: @tablet-width) {
     height: 510px;
   }
+
+  @media (min-width: @desktop-width) {
+    height: 505px;
+  }
 }
 
 .panorama__image-text {
@@ -54,7 +58,7 @@
   background-color: @bg-red;
 
   @media (min-width: @tablet-width) {
-    top: 57px;
+    top: 59px;
   }
 
   @media (min-width: @desktop-width) {
@@ -69,11 +73,15 @@
   background-color: @bg-grey;
 
   @media (min-width: @tablet-width) {
-    padding: 20px 30px 25px;
+    padding: 23px 30px 23px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 24px 32px 24px 26px;
   }
 }
 
@@ -108,6 +116,10 @@
     order: 1;
     grid-column-end: span 2;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .panorama__likes {
@@ -129,6 +141,11 @@
   @media (min-width: @tablet-width) {
     margin-right: 0;
     margin-left: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 16px;
   }
 }
 

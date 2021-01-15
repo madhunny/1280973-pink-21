@@ -3,27 +3,34 @@
   flex-direction: column;
   background-color: @bg-grey;
 
-  @media (max-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     margin: 0;
     min-height: 456px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    min-height: 556px;
   }
 }
 
 .photo__image {
   width: 100%;
   line-height: 0;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
+  display: block;
 }
 
 .photo__description {
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
-  padding-top: 7px;
+  padding-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+  }
 }
 
 .photo__message {
@@ -32,17 +39,21 @@
   @media (min-width: @tablet-width) {
     padding: 0 29px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 26px;
+  }
 }
 
 .photo__name {
-  margin: 11px 0 0;
   font-weight: @fw-bold;
   font-size: @fs-small;
   line-height: @lh-medium;
   color: @txt-dark;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
-    margin-top: 16px;
+    padding-top: 16px;
   }
 }
 
@@ -60,6 +71,7 @@
   font-size: @fs-small;
   line-height: @lh-medium;
   color: @txt-dark;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     margin-bottom: auto;
@@ -78,9 +90,15 @@
   @media (min-width: @tablet-width) {
     padding-left: 30px;
     padding-right: 12px;
-    padding-top: 6px;
+    padding-top: 12px;
     justify-content: space-between;
     margin: 0;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    padding-left: 26px;
     margin-bottom: 23px;
   }
 }
