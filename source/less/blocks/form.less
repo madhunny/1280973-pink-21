@@ -24,7 +24,8 @@
     display: grid;
     max-width: @desktop-width;
     margin: 0 auto;
-    grid-gap: 33px;
+    padding-left: 10px;
+    gap: 65px 30px;
     grid-template-areas:
       "name radio"
       "contacts contacts"
@@ -38,13 +39,12 @@
 .form__fieldset {
   position: relative;
   margin: 0;
-  padding-top: 39px;
-  padding-bottom: 42px;
   border: none;
+  padding-top: 38px;
+  padding-bottom: 41px;
 
   &--name {
     grid-area: name;
-    padding-top: 38px;
   }
 
   &--radio {
@@ -56,14 +56,20 @@
       margin-top: 38px;
 
       @media (min-width: @tablet-width) {
-        margin-top: 36px;
+        margin: 53px 0;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-left: 73px;
+        gap: 39px;
+        margin-bottom: 50px;
       }
     }
   }
 
   &--contacts {
-    padding-top: 14px;
     grid-area: contacts;
+    padding-top: 13px;
 
     @media (max-width: 440px) {
       .form__legend {
@@ -79,7 +85,6 @@
 
   &--comments {
     grid-area: comments;
-    padding-bottom: 38px;
   }
 
   @media (min-width: @tablet-width) {
@@ -95,38 +100,42 @@
       padding: 0;
     }
 
-    &--radio {
-      padding-top: 18px;
-      padding-bottom: 53px;
-    }
-
     &--contacts {
-      padding-top: 42px;
-      padding-bottom: 28px;
+      padding-top: 45px;
+      padding-bottom: 31px;
 
       .form__list {
-        gap: 36px;
+        gap: 34px;
+
+        @media (min-width: @desktop-width) {
+          gap: 82px;
+          margin: 40px 60px;
+          margin-bottom: 23px;
+        }
       }
     }
 
     &--adventure .form__list {
       gap: 43px;
-    }
 
-    &--comments {
-      padding-top: 53px;
-      padding-bottom: 43px;
-    }
-
-    .form__fieldset-wrapper {
-      margin: 0;
-      border: @border-grey;
-
-      &--noborder {
-        padding-top: 0;
-        padding-bottom: 0;
-        border: none;
+      @media (min-width: @desktop-width) {
+        margin-top: 53px;
+        margin-left: 59px;
+        margin-right: 1px;
+        margin-bottom: 56px;
+        gap: 43px 38px;
       }
+    }
+  }
+
+  .form__fieldset-wrapper {
+    margin: 0;
+    border: @border-grey;
+
+    &--noborder {
+      padding-top: 0;
+      padding-bottom: 0;
+      border: none;
     }
   }
 
@@ -135,6 +144,7 @@
     margin: 0;
   }
 }
+
 
 .form__fieldset:nth-child(2),
 .form__fieldset:nth-child(4) {
@@ -154,11 +164,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: 16px;
+  gap: 17px;
 
   &--checkbox {
     display: grid;
-    margin: 39px 0 0;
+    margin: 41px 0 0;
     gap: 43px;
 
     @media (min-width: @tablet-width) {
@@ -172,27 +182,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    gap: 52px;
-    margin-top: 7px;
-    margin-right: -5px;
+    gap: 53px;
+    margin: 0;
+    margin-top: 5px;
 
     &--row {
       display: grid;
       gap: 55px;
       grid-auto-flow: column;
-      margin-left: 44px;
-      margin-right: 71px;
-      margin-top: 30px;
-      margin-bottom: 30px;
     }
 
     &--checkbox {
       justify-content: space-between;
       gap: 45px 40px;
       grid-template-columns: 1fr 1fr 1fr;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      margin-left: 44px;
     }
   }
 }
@@ -233,7 +236,6 @@
   text-align: center;
   color: @txt-red;
   text-transform: @txt-upper;
-  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -262,7 +264,6 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-left: 9px;
     margin-right: 20px;
   }
 }
@@ -340,6 +341,7 @@
 
   @media (min-width: @tablet-width) {
     flex-grow: 1;
+    letter-spacing: 0.4px;
 
     &--phone {
       background-image: url("../img/phone.png");
@@ -362,16 +364,6 @@
     flex-grow: 1;
     margin: 0;
     letter-spacing: 0.5px;
-
-
-    &--phone {
-      margin-left: 14px;
-      margin-top: 11px;
-    }
-
-    &--mail {
-      margin-top: 11px;
-    }
   }
 }
 
@@ -381,13 +373,13 @@
   margin: 0;
   border: @border-grey;
 
-  &:checked+.form__label-choice::before {
+  &:checked + .form__label-choice::before {
     background-image: url("../img/svg/icon-yes.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &:focus+.form__label-choice::before {
+  &:focus + .form__label-choice::before {
     border: @border-red;
   }
 }
@@ -399,13 +391,13 @@
   border: @border-grey;
   border-radius: @radius;
 
-  &:checked+.form__label-radio::before {
+  &:checked + .form__label-radio::before {
     background-image: url("../img/svg/ellipse-small.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &:focus+.form__label-radio::before {
+  &:focus + .form__label-radio::before {
     border: @border-red;
   }
 }
@@ -421,10 +413,18 @@
   color: @txt-dark;
   border: @border-grey;
   border-radius: 1px;
-  margin-top: -5px;
+  margin-top: 16px;
 
   @media (min-width: @tablet-width) {
     height: 193px;
+    margin-top: 45px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 40px 58px;
+    width: 820px;
+    height: 126px;
   }
 }
 
@@ -466,9 +466,22 @@
   line-height: @lh-large;
   text-align: center;
   text-transform: @txt-upper;
+  margin-bottom: 22px;
+
+  span {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
-    margin-top: -3px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
+
+    span {
+      display: inline;
+    }
   }
 }
 
@@ -477,12 +490,17 @@
 }
 
 .form__send {
-  padding: 4px 0 21px;
   border: none;
   grid-area: send;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -495,14 +513,13 @@
     justify-content: space-between;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    margin-top: -3px;
-    gap: 142px;
+    gap: 140px;
+    padding-left: 22px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: -2px;
-    gap: 316px;
-    margin-top: 198px;
-    margin-bottom: -5px;
+    gap: 250px;
+    padding: 0;
+    margin-bottom: 8px;
   }
 }

@@ -132,10 +132,10 @@
     grid-auto-flow: column;
     gap: 80px;
     position: relative;
-    top: 5px;
+    top: 7px;
   }
 
-  @media (max-width: @desktop-width) {
+  @media (max-width: @desktop-width - 1px) {
     &--hide {
       display: none;
     }
@@ -149,10 +149,11 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
+    padding-bottom: 5px;
     border: none;
 
-    &--active {
-      text-decoration: underline;
+    &--active .nav__link {
+      border-bottom: 2px solid;
     }
   }
 }
@@ -176,6 +177,7 @@
   @media (min-width: @desktop-width) {
     text-transform: none;
     font-weight: @fw-normal;
+    padding-bottom: 7px;
 
     &:active {
       color: rgba(255, 255, 255, 0.3);
