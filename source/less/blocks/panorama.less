@@ -1,10 +1,14 @@
 .panorama {
   margin-bottom: 20px;
   padding: 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .panorama__headline {
-  margin: 24px 15px 51px;
+  margin: 25px 15px 50px;
   font-weight: @fw-normal;
   font-size: @fs-small;
   line-height: @lh-large;
@@ -12,14 +16,12 @@
   color: @txt-dark;
 
   @media (min-width: @tablet-width) {
-    margin-right: 25px;
-    margin-left: 25px;
+    margin: 71px 25px 77px;
     font-size: @fs-medium;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 150px;
-    margin-left: 150px;
+    margin: 72px 150px 90px;
   }
 }
 
@@ -33,6 +35,14 @@
 .panorama__image {
   width: 100%;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    height: 510px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 505px;
+  }
 }
 
 .panorama__image-text {
@@ -48,19 +58,31 @@
   background-color: @bg-red;
 
   @media (min-width: @tablet-width) {
-    top: 57px;
+    top: 59px;
   }
 
   @media (min-width: @desktop-width) {
     top: 54px;
-    right: 130px;
+    right: 169px;
   }
 }
 
-.panorama__massage {
+.panorama__message {
   margin: 0;
   padding: 17px 0 7px 17px;
   background-color: @bg-grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 23px 30px 23px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 24px 32px 24px 26px;
+  }
 }
 
 .panorama__name {
@@ -69,6 +91,10 @@
   font-size: @fs-small;
   line-height: @lh-medium;
   color: @txt-dark;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .panorama__time {
@@ -85,6 +111,15 @@
   font-size: @fs-small;
   line-height: @lh-medium;
   color: @txt-dark;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    grid-column-end: span 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .panorama__likes {
@@ -93,11 +128,25 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row-reverse;
+  }
 }
 
 .panorama__icon {
   margin-right: 19px;
   fill: @fill-red;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+    margin-left: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 16px;
+  }
 }
 
 .panorama__likes-text {
@@ -106,4 +155,10 @@
   line-height: @lh-medium;
   color: @txt-red;
   text-transform: @txt-upper;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    position: relative;
+    top: 2px;
+  }
 }

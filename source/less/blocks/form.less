@@ -1,7 +1,6 @@
 .form {
   display: grid;
   padding: 0;
-  gap: 40px;
   grid-template-areas:
     "name"
     "adventure "
@@ -11,14 +10,22 @@
     "send";
 
   @media (min-width: @tablet-width) {
-    gap: 70px;
+    gap: 65px;
+    grid-template-areas:
+      "name"
+      "radio"
+      "contacts"
+      "adventure "
+      "comments"
+      "send";
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     max-width: @desktop-width;
     margin: 0 auto;
-    grid-gap: 74px;
+    padding-left: 10px;
+    gap: 65px 30px;
     grid-template-areas:
       "name radio"
       "contacts contacts"
@@ -32,31 +39,37 @@
 .form__fieldset {
   position: relative;
   margin: 0;
-  padding: 0;
   border: none;
+  padding-top: 38px;
+  padding-bottom: 41px;
 
   &--name {
     grid-area: name;
-
-    @media (min-width: @tablet-width) {
-      // padding: 31px 0 30px;
-    }
   }
 
   &--radio {
-    padding-top: 76px;
     grid-area: radio;
 
     .form__list {
       display: grid;
-      margin-top: 36px;
-      gap: 35px;
+      gap: 36px;
+      margin-top: 38px;
+
+      @media (min-width: @tablet-width) {
+        margin: 53px 0;
+      }
+
+      @media (min-width: @desktop-width) {
+        margin-left: 73px;
+        gap: 39px;
+        margin-bottom: 50px;
+      }
     }
   }
 
   &--contacts {
-    padding: 33px 0 2px;
     grid-area: contacts;
+    padding-top: 13px;
 
     @media (max-width: 440px) {
       .form__legend {
@@ -67,39 +80,71 @@
   }
 
   &--adventure {
-    padding-top: 79px;
     grid-area: adventure;
   }
 
   &--comments {
-    padding-top: 74px;
     grid-area: comments;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 0 20px;
     max-width: @desktop-width;
-    margin: 0 auto;
-    width: 100%;
+    padding: 0 58px;
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
 
-    .form__fieldset-wrapper {
-      margin: 0;
-      padding-top: 54px;
-      padding-bottom: 54px;
-      border: @border-grey;
+    &--name {
+      border: none;
+      padding: 0;
+    }
 
-      &--noborder {
-        padding-top: 0;
-        padding-bottom: 0;
-        border: none;
+    &--contacts {
+      padding-top: 45px;
+      padding-bottom: 31px;
+
+      .form__list {
+        gap: 34px;
+
+        @media (min-width: @desktop-width) {
+          gap: 82px;
+          margin: 40px 60px;
+          margin-bottom: 23px;
+        }
+      }
+    }
+
+    &--adventure .form__list {
+      gap: 43px;
+
+      @media (min-width: @desktop-width) {
+        margin-top: 53px;
+        margin-left: 59px;
+        margin-right: 1px;
+        margin-bottom: 56px;
+        gap: 43px 38px;
       }
     }
   }
 
+  .form__fieldset-wrapper {
+    margin: 0;
+    border: @border-grey;
+
+    &--noborder {
+      padding-top: 0;
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+
   @media (min-width: @desktop-width) {
-    padding: 0 10px;
+    padding: 0;
+    margin: 0;
   }
 }
+
 
 .form__fieldset:nth-child(2),
 .form__fieldset:nth-child(4) {
@@ -123,11 +168,11 @@
 
   &--checkbox {
     display: grid;
-    margin: 37px 0 0;
+    margin: 41px 0 0;
     gap: 43px;
 
     @media (min-width: @tablet-width) {
-      margin: -5px 17px 0;
+      margin: 56px 0 47px;
       gap: 27px;
     }
   }
@@ -137,15 +182,19 @@
   }
 
   @media (min-width: @desktop-width) {
+    gap: 53px;
+    margin: 0;
+    margin-top: 5px;
+
     &--row {
       display: grid;
-      gap: 74px;
+      gap: 55px;
       grid-auto-flow: column;
     }
 
     &--checkbox {
       justify-content: space-between;
-      gap: 43px 5px;
+      gap: 45px 40px;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -174,17 +223,12 @@
     &--column {
       display: grid;
       grid-area: 22px;
-      // width: 100%;
     }
   }
 }
 
 .form__legend {
-  position: absolute;
-  top: 41px;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 30px;
   font-weight: @fw-normal;
   font-size: @fs-small;
@@ -198,7 +242,6 @@
     top: 0;
     left: 50%;
     right: 0;
-    margin: 0;
     width: max-content;
     padding: 10px 31px;
     background-color: @bg-white;
@@ -216,8 +259,12 @@
   text-transform: @txt-upper;
 
   @media (min-width: @tablet-width) {
-    margin-right: 19px;
-    margin-left: 10px;
+    margin: 5px 19px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-right: 20px;
   }
 }
 
@@ -242,6 +289,12 @@
   &:hover::before {
     border: @border-dark;
   }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      margin-right: 20px;
+    }
+  }
 }
 
 .form__label-choice {
@@ -254,7 +307,7 @@
     display: inline-block;
     width: 39px;
     height: 39px;
-    margin-right: 22px;
+    margin-right: 20px;
     vertical-align: middle;
     background-color: white;
     border: @border-grey;
@@ -276,6 +329,7 @@
   color: @txt-dark;
   border: @border-grey;
   border-radius: @br-min;
+  letter-spacing: 0.5px;
 
   &:hover {
     border: @border-dark;
@@ -287,12 +341,14 @@
 
   @media (min-width: @tablet-width) {
     flex-grow: 1;
+    letter-spacing: 0.4px;
 
     &--phone {
       background-image: url("../img/phone.png");
       background-repeat: no-repeat;
       background-position: right;
       background-size: contain;
+      margin: 0;
     }
 
     &--mail {
@@ -300,11 +356,14 @@
       background-repeat: no-repeat;
       background-position: right;
       background-size: contain;
+      margin: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
     flex-grow: 1;
+    margin: 0;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -345,8 +404,8 @@
 
 .form__textarea {
   width: 100%;
-  height: 197px;
-  padding: 23px 19px;
+  height: 201px;
+  padding: 14px 19px;
   font-size: @fs-medium;
   line-height: @lh-large;
   font-family: @ff-main;
@@ -354,6 +413,19 @@
   color: @txt-dark;
   border: @border-grey;
   border-radius: 1px;
+  margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    height: 193px;
+    margin-top: 45px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 40px 58px;
+    width: 820px;
+    height: 126px;
+  }
 }
 
 .form__input-form {
@@ -394,6 +466,23 @@
   line-height: @lh-large;
   text-align: center;
   text-transform: @txt-upper;
+  margin-bottom: 22px;
+
+  span {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
+
+    span {
+      display: inline;
+    }
+  }
 }
 
 .form__star {
@@ -401,19 +490,36 @@
 }
 
 .form__send {
-  padding: 4px 0 25px;
   border: none;
   grid-area: send;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .form__send-wrapper {
   display: grid;
   justify-content: center;
-  gap: 28px;
+  gap: 30px;
 
   @media (min-width: @tablet-width) {
     justify-content: space-between;
     align-items: center;
     grid-template-columns: 1fr 1fr;
+    gap: 140px;
+    padding-left: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 250px;
+    padding: 0;
+    margin-bottom: 8px;
   }
 }

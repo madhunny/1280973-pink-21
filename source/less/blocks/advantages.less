@@ -1,7 +1,7 @@
 .advges {
   position: relative;
-  margin-top: 38px;
-  padding: 34px 0 22px;
+  margin-top: 42px;
+  padding: 30px 0 0;
   color: @txt-white;
   background-color: @bg-grey;
   background-repeat: no-repeat;
@@ -19,9 +19,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 62px;
+    margin-top: 60px;
     padding-top: 4px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
 
     &::before {
       height: 54px;
@@ -29,28 +29,31 @@
   }
 
   @media (min-width: 695px) {
-    margin-top: 133px;
+    margin-top: 132px;
     padding-top: 0;
 
     &::before {
-      height: 100px;
+      height: 105px;
     }
   }
 }
 
 .advges__list {
   position: relative;
+  margin-top: 20px;
   margin-bottom: -3px;
   padding: 0;
   list-style: none;
   text-align: center;
+  display: grid;
+  gap: 34px;
 
   &::after {
     content: "";
     display: block;
     width: 100%;
     height: 288px;
-    margin-bottom: -20px;
+    margin: -5px 0 0;
     background-image: url("../img/advges/mobile/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
     background-position-x: center;
@@ -58,13 +61,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    // padding-left: 50%;
     padding-left: 310px;
     text-align: left;
+    gap: 36px;
+    padding-bottom: 44px;
 
     &::after {
       position: absolute;
-      bottom: -52px;
+      bottom: -32px;
       left: 0;
       display: block;
       width: 100%;
@@ -79,12 +83,11 @@
 
   @media (min-width: @desktop-width) {
     top: -96px;
-    display: grid;
     margin: 0 auto;
-    margin-bottom: -96px;
+    margin-bottom: -97px;
     padding: 0;
     text-align: center;
-    gap: 20px;
+    gap: 23px;
     grid-template-columns: repeat(3, 1fr);
 
     &::after {
@@ -110,7 +113,7 @@
 }
 
 .advges__title {
-  margin-bottom: 0;
+  margin: 0 0 10px;
   font-weight: @fw-bold;
   font-size: @fs-medium;
   line-height: @lh-medium;
@@ -118,26 +121,22 @@
 
   @media (min-width: @desktop-width) {
     max-width: 240px;
-    margin-top: 57px;
+    margin-top: 55px;
     font-size: @fs-xl;
     line-height: @lh-large;
   }
 }
 
 .advges__description {
-  margin-bottom: 28px;
+  margin: 0;
   font-weight: @fw-normal;
   font-size: @fs-small;
   line-height: @lh-medium;
   color: @txt-dark;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 33px;
-  }
-
   @media (min-width: @desktop-width) {
     max-width: 248px;
-    margin-top: 25px;
+    margin-top: 13px;
     font-size: @fs-medium;
     line-height: @lh-large;
   }

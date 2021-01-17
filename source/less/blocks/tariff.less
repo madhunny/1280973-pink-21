@@ -1,11 +1,10 @@
 .tariff {
   position: relative;
-  margin-top: 22px;
-  padding: 84px 0 0;
+  margin-top: 20px;
+  padding: 83px 0 0;
   background-color: @bg-grey;
   background-repeat: no-repeat;
   background-size: auto;
-  // overflow: hidden;
 
   &::before {
     content: "";
@@ -19,7 +18,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 55px;
+    margin-top: 59px;
     padding-top: 28px;
 
     &::before {
@@ -28,7 +27,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 64px;
+    margin-top: 60px;
     padding-top: 0;
 
     &::before {
@@ -91,8 +90,6 @@
   background-color: @bg-dark;
   border-right: @border-grey;
   border-left: @border-grey;
-  // max-width: 33%;
-  // width: 276px;
 
   @media (min-width: @tablet-width) {
     width: 25%;
@@ -106,6 +103,10 @@
     &:last-child {
       border-radius: 0 5px 0 0;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 1px 5px;
   }
 
   &--extra {
@@ -200,15 +201,8 @@
   }
 }
 
-/* .tariff__table-wrapper{
-  display: grid;
-  grid-template-columns: repeat(3, 270px);
-} */
-
 .tariff__table-name {
   margin: 0 0 12px;
-  // font-size: @fs-medium;
-  // line-height: @lh-large;
   font-weight: @fw-bold;
 
   @media (min-width: @tablet-width) {
@@ -236,7 +230,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     font-size: @fs-large;
   }
 }

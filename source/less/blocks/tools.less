@@ -7,6 +7,11 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .tools__button {
@@ -34,6 +39,12 @@
   @media (min-width: @tablet-width) {
     color: @fill-red;
     opacity: 1;
+
+    &--fill {
+      position: relative;
+      left: -4px;
+      top: 3px;
+    }
   }
 }
 
@@ -48,7 +59,7 @@
     .tools__slidecontainer {
       position: absolute;
       right: 0;
-      bottom: 27px;
+      bottom: 28px;
       left: 0;
       display: block;
       width: calc(100% - 80px);
@@ -67,12 +78,20 @@
   @media (min-width: @tablet-width) {
     align-items: center;
     width: 100%;
-    padding-top: 27px;
-    padding-right: 18px;
-    padding-bottom: 27px;
-    padding-left: 4px;
+    padding: 8px 16px 18px 0;
     border-bottom: 1px solid hsla(211, 27%, 21%, 0.1);
-    // display: grid;
+
+    &--fill {
+      padding: 24px 16px 21px 0;
+    }
+
+    &--contrast {
+      padding: 24px 16px 24px 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 12px 38px 10px 0;
   }
 }
 
@@ -80,7 +99,25 @@
   @media (min-width: @tablet-width) {
     width: 22px;
     height: 22px;
-    margin-right: 28px;
+    margin-right: 19px;
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+      margin-right: 25px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+    height: 44px;
+    margin-right: 40px;
+
+    &--contrast {
+      width: 35px;
+      height: 35px;
+      margin-right: 50px;
+    }
   }
 }
 
@@ -98,7 +135,6 @@
   height: 2px;
   background: @bg-dark;
   outline: none;
-
   appearance: none;
 }
 
