@@ -49,7 +49,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 210px;
-    padding-bottom: 124px;
+    padding-bottom: 123px;
   }
 }
 
@@ -96,6 +96,8 @@
   @media (min-width: @desktop-width) {
     font-size: @fs-xxxl;
     line-height: normal;
+    margin: 0;
+    margin-left: 23px;
 
     &--photo {
       padding-right: 20%;
@@ -130,9 +132,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    right: -114px;
-    width: 1050px;
-    height: 640px;
+    width: 100%;
+    height: auto;
+
+    img {
+      margin-left: 51px;
+      object-fit: cover;
+      height: 645px;
+    }
   }
 }
 
@@ -187,9 +194,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 6px;
+    margin-top: 7px;
     padding: 16px 28px;
     font-size: 21px;
+    margin-left: 20px;
   }
 }
 
@@ -209,10 +217,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 38px;
-    margin-bottom: 13px;
-    margin-left: 8px;
     gap: 10px 36px;
+    margin-top: 37px;
+    margin-left: 15px;
   }
 }
 
@@ -238,6 +245,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 4px;
+    margin-top: 17px;
+    margin-left: 20px;
   }
 }
