@@ -89,6 +89,7 @@
   background-color: @bg-dark;
   border-right: @border-grey;
   border-left: @border-grey;
+  background-clip: padding-box;
 
   @media (min-width: @tablet-width) {
     width: 25%;
@@ -154,6 +155,7 @@
   background-color: @bg-white;
   border: @border-grey;
   border-top: none;
+  background-clip: padding-box;
 
   &:not(.tariff__table-td--extra) p {
     padding: 0 20px;
@@ -181,6 +183,7 @@
 
     @media (min-width: @tablet-width) {
       display: table-cell;
+      border-top: @border-grey;
       width: 153px;
       padding-left: 15px;
       font-size: 14px;

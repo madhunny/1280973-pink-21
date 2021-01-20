@@ -29,9 +29,18 @@
 }
 
 .nav__logo-pink {
+  display: none;
+
+  &.mobile {
+    display: block;
+  }
+
   @media (min-width: @tablet-width) {
-    x: 72.19;
-    y: 16.89;
+    display: block;
+
+    &.mobile {
+      display: none;
+    }
   }
 }
 

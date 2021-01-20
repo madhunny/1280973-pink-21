@@ -56,6 +56,16 @@
   justify-content: flex-start;
   align-items: center;
   margin: 33px 0 0;
+  color: @txt-dark;
+
+  &:hover svg {
+    fill: @txt-dark;
+  }
+
+  &:active svg {
+    fill: @txt-dark;
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -73,13 +83,4 @@
   font-size: 0;
   color: @fill-red;
   fill: @txt-red;
-
-  &:hover path {
-    fill: @txt-dark;
-  }
-
-  &:active path {
-    opacity: 0.3;
-    fill: @txt-dark;
-  }
 }
